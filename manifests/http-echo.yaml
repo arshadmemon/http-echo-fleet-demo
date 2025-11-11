@@ -18,8 +18,9 @@ spec:
       - name: http-echo
         image: hashicorp/http-echo:0.2.3
         args:
-          - "-text=Hello from K8s"
+          - "-text=<h1>Hello from K8s</h1>"
           - "-listen=:5678"
+          - "-type=text/html"
         ports:
         - containerPort: 5678
 ---
