@@ -5,7 +5,7 @@ metadata:
   labels:
     app: http-echo
 spec:
-  replicas: 6
+  replicas: 3
   selector:
     matchLabels:
       app: http-echo
@@ -19,7 +19,7 @@ spec:
         image: hashicorp/http-echo:0.2.3
         args:
           - "-listen=:5678"
-          - "-text=<h1 style='font-size:60px;color:green;'>Hello from K8s</h1>"
+          - "-text=<h1 style='font-size:60px;color:blue;'>Hello from K8s</h1>"
         ports:
         - containerPort: 5678
 ---
